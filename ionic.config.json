@@ -1,0 +1,7 @@
+{
+  "name": "NotPlanet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
