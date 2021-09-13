@@ -1,0 +1,24 @@
+.content-body {
+    --ion-background-color: #1b7895;
+}
+
+.body-list__item {
+    cursor: pointer;
+}
+
+.footer-config {
+    --ion-background-color: #1b7895;
+}
+
+.title-header__config {
+    text-align: center;
+}
+
+.title-footer__config {
+    text-align: center;
+}
+
+.title-footer__config:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
