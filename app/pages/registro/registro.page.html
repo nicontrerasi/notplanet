@@ -1,9 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="content-body">
+  <ion-img class="ion-align-self-center content-img" src="assets/img/Logo-NotPlanet-blanco.png"></ion-img>
+  <ion-text class="ion-text-center" color="light">
+    <h1>Registrarse como:</h1>
 
+  <br>
+  </ion-text>
+  <ion-button (click)="onClick()" expand="block" fill="solid" size="large" color="light" shape="round">
+    Divulgador(a)
+  </ion-button>
+  <br>
+  <ion-button (click)="onClick()" expand="block" fill="solid" size="large" color="light" shape="round">
+    Socio/Lector
+  </ion-button>
+
+  <br>
+  <ion-text class="ion-text-center" color="light">
+    <h1>O tambien puedes:</h1>
+  </ion-text>
+
+  <br>
+  <ion-button (click)="onClick()" expand="block" fill="solid" size="large" color="light" shape="round">
+    Iniciar Sesión
+  </ion-button>
 </ion-content>

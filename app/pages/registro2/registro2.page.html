@@ -1,9 +1,56 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro2</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="content-body">
+  <ion-img class="ion-align-self-center content-img" src="assets/img/registrarse.png"></ion-img>
+  <ion-text class="ion-text-center" color="light">
+    <h1 class="content-h1">Registrarse como:</h1>
+    <h1 class="content-h1__2">Divulgador(a)</h1>
+  </ion-text>
+  <ion-label>
+    <ion-input class="ion-text-center content-input" type="text" placeholder="Nombre completo"></ion-input>
+  </ion-label>
 
+  <br>
+  <ion-label>
+    <ion-input class="ion-text-center content-input" type="text" placeholder="Profesión/Oficio"></ion-input>
+  </ion-label>
+
+  <br>
+  <ion-label>
+    <ion-input class="ion-text-center content-input" type="text" placeholder="Empresa/ONG/Ocupación"></ion-input>
+  </ion-label>
+
+  <br>
+  <ion-label>
+    <ion-input class="ion-text-center content-input" type="mail" placeholder="Correo Electrónico"></ion-input>
+  </ion-label>
+
+  <br>
+  <ion-label>
+    <ion-input class="ion-text-center content-input" type="password" placeholder="Contraseña"></ion-input>
+  </ion-label>
+
+  <br>
+  <ion-label>
+    <ion-input class="ion-text-center content-input" type="password" placeholder="Confirmar Contraseña"></ion-input>
+  </ion-label>
+
+  <br>
+  <ion-button (click)="onClick()" expand="block" fill="solid" size="large" color="light" shape="round">
+    Registrarse
+  </ion-button>
+
+  
 </ion-content>

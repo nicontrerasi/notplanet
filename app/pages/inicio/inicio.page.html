@@ -1,9 +1,104 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>inicio</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="header-title">Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="content-body">
+  <h1 class="content-body__h1">Últimos artículos</h1>
+  <ion-card class="content-card">
+    <ion-card-header>
+      <ion-img src="/assets/img/energia-nuclear.jpg"></ion-img>
+      <ion-card-subtitle>Energía Nuclear</ion-card-subtitle>
+      <ion-card-title class="content-card__title">¿Es la energía del futuro?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-button class="content-card__button" (click)="onClick()" expand="block" fill="outline" shape="round" color="medium">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 
+  <ion-card class="content-card">
+    <ion-card-header>
+      <ion-img src="/assets/img/energia-petroleo.jpg"></ion-img>
+      <ion-card-subtitle>Petroleo</ion-card-subtitle>
+      <ion-card-title class="content-card__title">¿Por que es tan dañino para el planeta?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-button class="content-card__button" (click)="onClick()" expand="block" fill="outline" shape="round" color="medium">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="content-card">
+    <ion-card-header>
+      <ion-img src="/assets/img/energia-eolica.jpg"></ion-img>
+      <ion-card-subtitle>Energía Eólica</ion-card-subtitle>
+      <ion-card-title class="content-card__title">¿Es viable la energía eólica?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-button class="content-card__button" (click)="onClick()" expand="block" fill="outline" shape="round" color="medium">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="content-card">
+    <ion-card-header>
+      <ion-img src="/assets/img/calentamiento-global.jpg"></ion-img>
+      <ion-card-subtitle>Calentamiento global</ion-card-subtitle>
+      <ion-card-title class="content-card__title">¿Es revertible?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-button class="content-card__button" (click)="onClick()" expand="block" fill="outline" shape="round" color="medium">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="content-card">
+    <ion-card-header>
+      <ion-img src="/assets/img/hidroelectrica.jpg"></ion-img>
+      <ion-card-subtitle>Energía Hidroeléctrica</ion-card-subtitle>
+      <ion-card-title class="content-card__title">Pro y contra de una energía renovable dañina</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-button class="content-card__button" (click)="onClick()" expand="block" fill="outline" shape="round" color="medium">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="content-card">
+    <ion-card-header>
+      <ion-img src="/assets/img/biodiesel.jpg"></ion-img>
+      <ion-card-subtitle>BioDiesel</ion-card-subtitle>
+      <ion-card-title class="content-card__title">¿Es una buena opción?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      <ion-button class="content-card__button" (click)="onClick()" expand="block" fill="outline" shape="round" color="medium">
+        Ver más
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  
 </ion-content>

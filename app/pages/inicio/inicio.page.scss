@@ -1,0 +1,26 @@
+.header-title {
+    text-align: center;
+}
+
+.content-body {
+    --ion-background-color: #1b7895;
+}
+
+.content-card__title {
+    text-align: center;
+}
+
+.content-body__h1 {
+    text-align: center;
+    color: #fefafa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-card {
+    --ion-background-color: #fefafa;
+}
+
+.content-card__button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
