@@ -68,7 +68,7 @@ export class AppComponent {
     {
       icon: 'close-circle-outline',
       name: 'Cerrar Sesión',
-      redirecTo: '/configuracion'
+      redirecTo: '/perfil'
     },
   ];
 

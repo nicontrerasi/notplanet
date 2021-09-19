@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-configuracion',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfiguracionPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
+
+  goPerfil() {
+    this.navCtrl.navigateRoot('perfil');
+  }
 
   ngOnInit() {
   }

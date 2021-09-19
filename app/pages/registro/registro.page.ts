@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IonNav, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
+
+  go_reg2() {
+    this.navCtrl.navigateRoot('registro2')
+  }
+
+  go_iniSesion() {
+    this.navCtrl.navigateRoot('ini-sesion')
+  }
 
   ngOnInit() {
   }

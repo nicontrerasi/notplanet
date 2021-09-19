@@ -8,39 +8,33 @@
         mode="ios">
       </ion-back-button>
     </ion-buttons>
-    <ion-title class="title-header__config"> <ion-icon name="settings-outline"></ion-icon> Configuración</ion-title>
+    <ion-title class="title-header__config">Configuración</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-body ion-padding">
 <ion-list class="body-list">
-  <ion-item class="body-list__item">
+  <ion-item button (click)="goPerfil()" class="body-list__item">
     <ion-label color="light">Mi Cuenta</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item class="body-list__item">
+  <ion-item button (click)="onClick()" class="body-list__item">
     <ion-label color="light">Mis Donaciones</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item class="body-list__item">
+  <ion-item button (click)="onClick()" class="body-list__item">
     <ion-label color="light">Mis Publicaciones</ion-label>
-    <ion-icon href="#" color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item class="body-list__item">
+  <ion-item button (click)="onClick()" class="body-list__item">
     <ion-label color="light">Privacidad</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
   <ion-item>
     <ion-label color="light">Notificaciones</ion-label>
     <ion-toggle slot="end"></ion-toggle>
   </ion-item>
-  <ion-item>
+  <ion-item button (click)="onClick()">
     <ion-label class="body-list__item" color="light">Preferencias</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item>
+  <ion-item button (click)="onClick()">
     <ion-label class="body-list__item" color="light">Uso de datos</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
 </ion-list>
 

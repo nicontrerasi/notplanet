@@ -17,18 +17,8 @@ export class InicioPage implements OnInit {
   componentes: Componente [] = [
     {
       icon: '',
-      name: 'Iniciar Sesión',
-      redirecTo: '/configuracion'
-    },
-    {
-      icon: 'magnet-outline',
-      name: 'Action Sheet',
-      redirecTo: '/action-sheet'
-    },
-    {
-      icon: 'bug-outline',
-      name: 'task',
-      redirecTo: '/task'
+      name: 'Inicio',
+      redirecTo: '/inicio'
     },
   ];
 
