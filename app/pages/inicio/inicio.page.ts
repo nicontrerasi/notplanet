@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 
 interface Componente {
   icon: string;
@@ -22,7 +22,7 @@ export class InicioPage implements OnInit {
     },
   ];
 
-  constructor(private menuController: MenuController) { }
+  constructor(private menuController: MenuController, public navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -31,6 +31,30 @@ export class InicioPage implements OnInit {
     
     this.menuController.open('first');
 
+  }
+
+  goNuclear() {
+    this.navCtrl.navigateRoot('art-nuclear')
+  }
+
+  goPetroleo() {
+    this.navCtrl.navigateRoot('art-petroleo')
+  }
+
+  goEolica() {
+    this.navCtrl.navigateRoot('art-eolica')
+  }
+
+  goCalentamiento() {
+    this.navCtrl.navigateRoot('calentamiento-global')
+  }
+
+  goHidro() {
+    this.navCtrl.navigateRoot('art-hidroelectrica')
+  }
+
+  goBiodiesel() {
+    this.navCtrl.navigateRoot('art-biodiesel')
   }
 
 }

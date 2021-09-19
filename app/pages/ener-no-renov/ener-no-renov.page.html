@@ -2,45 +2,41 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button
-        defaultHref="/"
+        defaultHref="/inicio"
         text=""
         color="primary"
         mode="ios">
       </ion-back-button>
     </ion-buttons>
-    <ion-title class="title-header__renov">Energías Renovables</ion-title>
+    <ion-title class="title-header__renov">Energías No Renovables</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="content-body ion-padding">
   <ion-list class="body-list__item">
-  <ion-item>
+  <ion-item button (click)="goPetroleo()">
     <ion-thumbnail slot="start">
       <img src="/assets/img/petroleo.png">
     </ion-thumbnail>
     <ion-label color="light">Petróleo</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item>
+  <ion-item button (click)="goCarbon()">
     <ion-thumbnail slot="start">
       <img src="/assets/img/carbon.png">
     </ion-thumbnail>
     <ion-label color="light">Carbón</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item>
+  <ion-item button (click)="goNuclear()">
     <ion-thumbnail slot="start">
       <img src="/assets/img/nuclear.png">
     </ion-thumbnail>
     <ion-label color="light">Nuclear</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
-  <ion-item>
+  <ion-item button (click)="goGasNatural()">
     <ion-thumbnail slot="start">
       <img src="/assets/img/gas-natural.png">
     </ion-thumbnail>
     <ion-label color="light">Gas Natural</ion-label>
-    <ion-icon color="light" slot="end" name="chevron-forward-outline"></ion-icon>
   </ion-item>
 </ion-list>
 </ion-content>

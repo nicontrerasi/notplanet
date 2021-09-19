@@ -38,7 +38,7 @@ export class AppComponent {
     {
       icon: 'leaf-outline',
       name: 'Calidad del Aire',
-      redirecTo: '/calid-aire'
+      redirecTo: '/'
     },
     {
       icon: 'help-circle-outline',
@@ -48,7 +48,7 @@ export class AppComponent {
     {
       icon: 'thermometer-outline',
       name: 'Viabilidad de Energías',
-      redirecTo: '/viabilidad'
+      redirecTo: '/'
     },
     {
       icon: 'heart-outline',

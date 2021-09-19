@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ener-no-renov',
@@ -7,7 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnerNoRenovPage implements OnInit {
 
-  constructor() { }
+  constructor(public navCtrl: NavController) { }
+
+  goPetroleo() {
+    this.navCtrl.navigateRoot('art-petroleo');
+  }
+
+  goCarbon() {
+    this.navCtrl.navigateRoot('art-carbon');
+  }
+
+  goNuclear() {
+    this.navCtrl.navigateRoot('art-nuclear');
+  }
+
+  goGasNatural() {
+    this.navCtrl.navigateRoot('art-gas-natural');
+  }
 
   ngOnInit() {
   }
