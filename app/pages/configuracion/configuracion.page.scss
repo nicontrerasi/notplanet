@@ -1,3 +1,7 @@
+.header-title__config {
+    text-align: center;
+}
+
 .content-body {
     --ion-background-color: #1b7895;
 }
@@ -10,10 +14,6 @@
     --ion-background-color: #1b7895;
 }
 
-.title-header__config {
-    text-align: center;
-}
-
 .title-footer__config {
     text-align: center;
 }
@@ -21,4 +21,8 @@
 .title-footer__config:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.footer-button__config {
+    text-align: center;
 }
