@@ -20,16 +20,16 @@
   </ion-text>
   <br>
   <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="email" placeholder="Correo electrónico" required></ion-input>
+    <ion-input class="ion-text-center body-label__input" type="email" #email placeholder="Correo" required></ion-input>
   </ion-label>
 
   <br>
   <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="password" placeholder="Contraseña"></ion-input>
+    <ion-input class="ion-text-center body-label__input" type="password" #password placeholder="Contraseña"></ion-input>
   </ion-label>
 
   <br>
-  <ion-button (click)="enter()" expand="block" fill="solid" size="large" color="light" shape="round">
+  <ion-button (click)="onLogin(email, password)" expand="block" fill="solid" size="large" color="light" shape="round">
     Entrar
   </ion-button>
 

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DonacionesPageRoutingModule } from './donaciones-routing.module';
+import { DivulgadoresPageRoutingModule } from './divulgadores-routing.module';
 
-import { DonacionesPage } from './donaciones.page';
+import { DivulgadoresPage } from './divulgadores.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DonacionesPageRoutingModule
+    DivulgadoresPageRoutingModule
   ],
-  declarations: [DonacionesPage]
+  declarations: [DivulgadoresPage]
 })
-export class DonacionesPageModule {}
+export class DivulgadoresPageModule {}

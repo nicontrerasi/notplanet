@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-registro2',
@@ -8,15 +9,35 @@ import { NavController, NavParams } from '@ionic/angular';
 })
 export class Registro2Page implements OnInit {
 
+  usuario = {
+    nombre: '',
+    profesion: '',
+    empresa: '',
+    email: '',
+    password: '',
+  }
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, private authSvc: AuthService) { }
 
-  register() {
-    this.navCtrl.navigateRoot('inicio');
+  onSubmit() {
+    console.log('submit');
+    console.log(this.usuario);
+    this.navCtrl.navigateRoot('ini-sesion2');
   }
 
   ngOnInit() {
   }
 
+  async onRegister(email, password) {
+    try{
+      const user = await this.authSvc.register(email.value, password.value);
+      if (user){
+        console.log('User: ', user)
+      }
+    }
+    catch(error) {
+      console.log('Error: ',error)
+    }
+  }
 
 }

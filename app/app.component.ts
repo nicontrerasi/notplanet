@@ -37,8 +37,8 @@ export class AppComponent {
     },
     {
       icon: 'leaf-outline',
-      name: 'Calidad del Aire',
-      redirecTo: '/'
+      name: 'Feriados en Chile',
+      redirecTo: '/calid-aire'
     },
     {
       icon: 'help-circle-outline',
@@ -53,7 +53,7 @@ export class AppComponent {
     {
       icon: 'heart-outline',
       name: 'Donar',
-      redirecTo: '/donaciones'
+      redirecTo: '/divulgadores'
     },
     {
       icon: 'settings-outline',

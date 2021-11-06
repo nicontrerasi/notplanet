@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-perfil',
@@ -8,7 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class PerfilPage implements OnInit {
 
-  constructor(public alertController: AlertController) { }
+  constructor(public alertController: AlertController, private afAuth:AngularFireAuth, public navCtrl: NavController) { }
 
   async closeSesionAlert() {
     const alert = await this.alertController.create({
@@ -168,6 +169,16 @@ export class PerfilPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  async logout() :Promise<void>{
+    try{
+      await this.afAuth.signOut();
+      this.navCtrl.navigateRoot('ini-sesion');
+    }
+    catch(error){
+      console.log('Error: ', error)
+    }
   }
 
 }

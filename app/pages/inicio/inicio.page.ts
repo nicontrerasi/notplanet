@@ -25,6 +25,7 @@ export class InicioPage implements OnInit {
   constructor(private menuController: MenuController, public navCtrl: NavController) { }
 
   ngOnInit() {
+    document.getElementById('nombre')
   }
 
   mostrarMenu(){

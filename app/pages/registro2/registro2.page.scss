@@ -11,11 +11,13 @@
 
 .body-h1 {
     font-size: 20px;
+    color: #fff;
 }
 
 .body-h1__2 {
     font-size: 25px;
     font-weight: bold;
+    color: #fff;
 }
 
 .body-label__input {
@@ -24,4 +26,8 @@
     border: 2px solid #fefafa;
     border-radius: 40px;
     display: flex;
+}
+
+.form-label {
+    color: #1b7895;
 }

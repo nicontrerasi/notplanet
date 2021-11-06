@@ -13,46 +13,37 @@
 </ion-header>
 
 <ion-content class="content-body">
-  <ion-img class="ion-align-self-center body-text__img" src="assets/img/registrarse.png"></ion-img>
-  <ion-text class="ion-text-center" color="light">
-    <h1 class="body-h1">Registrarse como:</h1>
-    <h1 class="body-h1__2">Divulgador(a)</h1>
-  </ion-text>
+  <ion-img class="ion-align-self-center body-text__img" src="assets/img/Logo-NotPlanet-blanco.png"></ion-img>
+  <h1 class="body-h1 ion-text-center">Registrarse como:</h1>
+  <h1 class="body-h1 ion-text-center">Divulgador(a)</h1>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()" method="GET">
+    <ion-list-header>
+      <ion-label class="form-label">Formulario Válido: {{formulario.valid}}</ion-label>
+    </ion-list-header>
 
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="text" #name placeholder="Nombre Completo" name="nombre" [(ngModel)]="usuario.nombre" required ></ion-input>
+    </ion-item>
 
-  <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="text" placeholder="Nombre completo"></ion-input>
-  </ion-label>
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="text" #profession placeholder="Profesión/Oficio" name="profesion" [(ngModel)]="usuario.profesion" required ></ion-input>
+    </ion-item>
 
-  <br>
-  <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="text" placeholder="Profesión/Oficio"></ion-input>
-  </ion-label>
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="text" #company placeholder="Empresa/ONG/Ocupación" name="empresa" [(ngModel)]="usuario.empresa" required ></ion-input>
+    </ion-item>
 
-  <br>
-  <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="text" placeholder="Empresa/ONG/Ocupación"></ion-input>
-  </ion-label>
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="email" #email placeholder="Correo" name="email" [(ngModel)]="usuario.email" required ></ion-input>
+    </ion-item>
 
-  <br>
-  <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="mail" placeholder="Correo Electrónico"></ion-input>
-  </ion-label>
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="password" #password placeholder="Contraseña" name="password" [(ngModel)]="usuario.password" required ></ion-input>
+    </ion-item>
 
-  <br>
-  <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="password" placeholder="Contraseña"></ion-input>
-  </ion-label>
+    <ion-button [disabled] = "formulario.invalid" type="submit" (click)="onRegister(email, password)" expand="block" fill="solid" size="large" color="light" shape="round">
+      Registrarse
+    </ion-button>
 
-  <br>
-  <ion-label>
-    <ion-input class="ion-text-center body-label__input" type="password" placeholder="Confirmar Contraseña"></ion-input>
-  </ion-label>
-
-  <br>
-  <ion-button (click)="register()" expand="block" fill="solid" size="large" color="light" shape="round" type="submit">
-    Registrarse
-  </ion-button>
-
-  
+  </form>  
 </ion-content>

@@ -1,0 +1,75 @@
+<ion-header class="header-config">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title__config">Donaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-body">
+  <ion-item class="body-list__item">
+    <ion-label class="list-item__label" position="fixed">Nombre</ion-label>
+    <ion-input class="list-item__input" type="text" [(ngModel)]="newDato.nom" placeholder="Ingresa tu nombre y apellido" required></ion-input>
+  </ion-item>
+
+  <ion-item class="body-list__item">
+    <ion-label class="list-item__label" position="fixed">Donacion</ion-label>
+    <ion-input class="list-item__input" type="number" [(ngModel)]="newDato.donacion" placeholder="Monto a donar" required></ion-input>
+  </ion-item>
+
+  <ion-item class="body-list__item">
+    <ion-label class="list-item__label">Moneda</ion-label>
+    <ion-select class="list-item__input" [(ngModel)]="newDato.moneda" placeholder="Selecciona uno">
+      <ion-select-option value="CLP">CLP</ion-select-option>
+      <ion-select-option value="$">$</ion-select-option>
+      <ion-select-option value="€">€</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-item class="body-list__item">
+      <ion-label class="list-item__label">Divulgador</ion-label>
+      <ion-select class="list-item__input" [(ngModel)]="newDato.divulgador" placeholder="Selecciona uno">
+        <ion-select-option value="Diego Encina">Diego Encina</ion-select-option>
+        <ion-select-option value="Priscila Hernandez">Priscila Hernández</ion-select-option>
+        <ion-select-option value="Daniel Figueroa">Daniel Figueroa</ion-select-option>
+        <ion-select-option value="Nicolas Contreras">Nicolás Contreras</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  <ion-button class="footer-button__config" (click)="addDatos()" color="light" expand="full" shape="round">
+    Realizar donación
+  </ion-button>
+
+  <ion-list #mylist class="body-list">
+    <ion-list-header>
+      <ion-label class="middle-title__donation">Mis donaciones</ion-label>
+    </ion-list-header>
+  </ion-list>
+  
+  <ion-list>
+    <ion-item-sliding *ngFor="let dato of datos">
+      <ion-item class="body-list__item">
+        <ion-label text-wrap>
+          <h3 class="h3_donation">De: {{dato.nom }}</h3>
+          <ion-text>
+            <p class="p_donation">Monto: {{dato.moneda}}{{dato.donacion}}</p>
+          </ion-text>
+          <p class="p_donation">Fecha: {{ dato.modified | date: 'short' }}</p>
+          <h3 class="h3_donation">Para: {{dato.divulgador}}</h3>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="secondary" (click)="updateDatos(dato)">Actualizar</ion-item-option>
+        <ion-item-option color="danger" (click)="deleteDatos(dato)">Eliminar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+
+</ion-content>
