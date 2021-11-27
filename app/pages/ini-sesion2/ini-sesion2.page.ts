@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController, AlertController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ini-sesion2',
@@ -10,7 +11,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class IniSesion2Page implements OnInit {
 
-  constructor(public navCtrl: NavController, private authSvc: AuthService, private router: Router, public alertController: AlertController) { }
+  constructor(public navCtrl: NavController, private authSvc: AuthService, private router: Router, public alertController: AlertController, public toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -22,7 +23,7 @@ export class IniSesion2Page implements OnInit {
         const isVerified = this.authSvc.isEmailVerified(user);
         this.redirectUser(isVerified);
         console.log(isVerified)
-        this.sayHiAlert(email)
+        this.presentToast("Bienvenido a NotPlanet "+user.email);
         if (isVerified === false) {
           this.VerifiedAlert()
         }
@@ -65,6 +66,17 @@ export class IniSesion2Page implements OnInit {
 
     const { role } = await alert.onDidDismiss();
     console.log('onDidDismiss resolved with role', role);
+  }
+
+  async presentToast(message:string,position?:any, duration?:number){
+    const toast = await this.toastController.create(
+      {
+        message:message,
+        duration:duration?duration:2500,
+        position: 'bottom'
+      }
+    );
+    toast.present();
   }
 
 }
