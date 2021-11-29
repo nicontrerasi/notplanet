@@ -1,0 +1,34 @@
+.header-title {
+    text-align: center;
+}
+
+.content-body {
+    --ion-background-color: #1b7895;
+}
+
+.body-card__title {
+    text-align: center;
+}
+
+.content-body__subtitle {
+    font-weight: bold;
+}
+
+.content-body__title {
+    text-align: center;
+    color: #fefafa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-card {
+    --ion-background-color: #fefafa;
+}
+
+.body-card__button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.body-card__content {
+    text-align: justify;
+}

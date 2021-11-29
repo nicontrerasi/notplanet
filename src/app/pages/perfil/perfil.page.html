@@ -1,0 +1,62 @@
+<ion-header class="header-config">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/configuracion"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-header__config">Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-body ion-padding">
+<ion-list class="body-list">
+  <ion-item button (click) = "userChange()" class="body-list__item">
+    <ion-label color="light">Nombre de usuario</ion-label>
+    <ion-text color="medium">
+      <p>@user1</p>
+    </ion-text>
+  </ion-item>
+  <ion-item button (click) = "phoneChange()" class="body-list__item">
+    <ion-label color="light">Teléfono</ion-label>
+    <ion-text color="medium">
+      <p>+569 12345 6987</p>
+    </ion-text>
+  </ion-item>
+  <ion-item button (click) = "mailChange()" class="body-list__item">
+    <ion-label color="light">Correo</ion-label>
+    <ion-text color="medium">
+      <p>user@domain.com</p>
+    </ion-text>
+  </ion-item>
+  <ion-item button (click) = "pwdChange()" class="body-list__item">
+    <ion-label color="light">Contraseña</ion-label>
+    <ion-text color="medium">
+      <p>Cambiar</p>
+    </ion-text>
+  </ion-item>
+  <ion-item button (click) = "onClick()">
+    <ion-title class="subtitle-body-list__item" color="light"> Datos y Permisos</ion-title>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label class="body-list__item" color="light">País</ion-label>
+    <ion-text color="medium">
+      <p>Chile</p>
+    </ion-text>
+  </ion-item>
+  <ion-item button (click) = "onClick()">
+    <ion-label class="body-list__item" color="light">Tus datos en NotPlanet</ion-label>
+  </ion-item>
+  <ion-item button (click) = "onClick()">
+    <ion-label class="body-list__item" color="light">Aplicaciones y Sesiones</ion-label>
+  </ion-item>
+</ion-list>
+<br>
+<ion-button (click)="logout()" class="closeSession_button" expand="block" shape="round" color="light">Cerrar Sesión</ion-button>
+<ion-button (click)="deactivateAccountAlert()" class="deactivateSession_button" expand="block" shape="round" color="danger">Desactivar Cuenta</ion-button>
+
+</ion-content>

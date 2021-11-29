@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/registro"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-body">
+  <ion-img class="ion-align-self-center body-text__img" src="assets/img/Logo-NotPlanet-blanco.png"></ion-img>
+  <h1 class="body-h1 ion-text-center">Registrarse como:</h1>
+  <h1 class="body-h1 ion-text-center">Divulgador(a)</h1>
+  <form #formulario="ngForm" (ngSubmit)="onSubmit()" method="GET">
+    <ion-list-header>
+      <ion-label class="form-label">Formulario Válido: {{formulario.valid}}</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="text" #name placeholder="Nombre Completo" name="nombre" [(ngModel)]="usuario.nombre" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="text" #profession placeholder="Profesión/Oficio" name="profesion" [(ngModel)]="usuario.profesion" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="text" #company placeholder="Empresa/ONG/Ocupación" name="empresa" [(ngModel)]="usuario.empresa" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="email" #email placeholder="Correo" name="email" [(ngModel)]="usuario.email" required ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="ion-text-center body-label__input" type="password" #password placeholder="Contraseña" name="password" [(ngModel)]="usuario.password" required ></ion-input>
+    </ion-item>
+
+    <ion-button [disabled] = "formulario.invalid" type="submit" (click)="onRegister(email, password)" expand="block" fill="solid" size="large" color="light" shape="round">
+      Registrarse
+    </ion-button>
+
+  </form>  
+</ion-content>

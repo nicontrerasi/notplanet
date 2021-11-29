@@ -1,0 +1,68 @@
+<ion-header class="header-renov">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title__renov">Energías Renovables</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-body ion-padding">
+  <ion-list class="body-list__item">
+
+  <ion-item button (click)="goEolica()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/eolica.png">
+    </ion-thumbnail>
+    <ion-label color="light">Eólica</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="goGeotermica()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/geotermica.png">
+    </ion-thumbnail>
+    <ion-label color="light">Geotérmica</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="goHidro()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/hidroelectrica.png">
+    </ion-thumbnail>
+    <ion-label color="light">Hidroeléctrica</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="goSolar()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/solar.png">
+    </ion-thumbnail>
+    <ion-label color="light">Solar</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="goUndimotriz()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/undimotriz.png">
+    </ion-thumbnail>
+    <ion-label color="light">Undimotriz</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="goBiodiesel()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/biodiesel.png">
+    </ion-thumbnail>
+    <ion-label color="light">BioDiesel</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="goOsmotica()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/osmotica.png">
+    </ion-thumbnail>
+    <ion-label color="light">Osmótica</ion-label>
+  </ion-item>
+  
+</ion-list>
+</ion-content>

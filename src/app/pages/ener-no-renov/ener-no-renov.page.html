@@ -1,0 +1,42 @@
+<ion-header class="header-renov">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/inicio"
+        text=""
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="header-title__renov">Energías No Renovables</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-body ion-padding">
+  <ion-list class="body-list__item">
+  <ion-item button (click)="goPetroleo()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/petroleo.png">
+    </ion-thumbnail>
+    <ion-label color="light">Petróleo</ion-label>
+  </ion-item>
+  <ion-item button (click)="goCarbon()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/carbon.png">
+    </ion-thumbnail>
+    <ion-label color="light">Carbón</ion-label>
+  </ion-item>
+  <ion-item button (click)="goNuclear()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/nuclear.png">
+    </ion-thumbnail>
+    <ion-label color="light">Nuclear</ion-label>
+  </ion-item>
+  <ion-item button (click)="goGasNatural()">
+    <ion-thumbnail slot="start">
+      <img src="/assets/img/gas-natural.png">
+    </ion-thumbnail>
+    <ion-label color="light">Gas Natural</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
